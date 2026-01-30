@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Simple Notes</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link href="https://fonts.googleapis.com" rel="stylesheet"> 
+</head>
+<body>
+
+    <div class="header">
+        <h1>Note Manager</h1>
+        <input type="text" id="search-input" placeholder="Search notes...">
+    </div>
+
+
+    <div class="tabs">
+        <button class="tab-btn" onclick="setFilter('All')">All</button>
+        <button class="tab-btn work-tab" onclick="setFilter('Work')">Work</button>
+        <button class="tab-btn personal-tab" onclick="setFilter('Personal')">Personal</button>
+        <button class="tab-btn study-tab" onclick="setFilter('Study')">Study</button>
+    </div>
+
+    <div class="content">
+     
+        <div class="add-box">
+            <h3>New Note</h3>
+            <input type="text" id="title-input" placeholder="Title">
+            <textarea id="text-input" placeholder="Content"></textarea>
+            <select id="category-input">
+                <option value="Work">Work</option>
+                <option value="Personal">Personal</option>
+                <option value="Study">Study</option>
+            </select>
+            <button id="add-btn">Save</button>
+        </div>
+
+      
+        <div id="notes-list"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
